@@ -1,0 +1,16 @@
+# object_detection_module.py
+import rospy
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
+
+def object_detection_callback(image_msg):
+    # Object detection logic using image processing
+    # ...
+
+def main():
+    rospy.init_node('object_detection_node')
+    rospy.Subscriber('camera_image', Image, object_detection_callback)
+    rospy.spin()
+
+if __name__ == "__main__":
+    main()
