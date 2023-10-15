@@ -1,0 +1,18 @@
+# navigation_module.py
+import rospy
+from geometry_msgs.msg import Twist
+
+def navigate():
+    # Navigation logic to move the robot
+    # ...
+
+def main():
+    rospy.init_node('navigation_node')
+    rate = rospy.Rate(10)  # 10 Hz
+
+    while not rospy.is_shutdown():
+        navigate()
+        rate.sleep()
+
+if __name__ == "__main__":
+    main()
