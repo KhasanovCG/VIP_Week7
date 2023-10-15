@@ -1,0 +1,15 @@
+# slam_module.py
+import rospy
+from nav_msgs.msg import OccupancyGrid
+
+def slam_callback(data):
+    # SLAM logic to create and update the map
+    # ...
+
+def main():
+    rospy.init_node('slam_node')
+    rospy.Subscriber('slam_map', OccupancyGrid, slam_callback)
+    rospy.spin()
+
+if __name__ == "__main__":
+    main()
